@@ -111,8 +111,8 @@ describe('ReactPlayer', () => {
         }
       }
     }
-    // Note that playing is set to true by default
-    render(<ReactPlayer ref={ref} playing {...props} />, div)
+    // Note that player is playing and muted by default
+    render(<ReactPlayer ref={ref} playing muted {...props} />, div)
   }
 
   // Test util for rendering a player and then changing props after a short time
