@@ -119,7 +119,10 @@ export class FilePlayer extends Component {
   play () {
     const promise = this.player.play()
     if (promise) {
-      promise.catch(this.props.onError)
+      promise.catch(e => {
+        console.error(e)
+        this.props.onError(e)
+      })
     }
   }
   pause () {
