@@ -157,6 +157,7 @@ describe('ReactPlayer', () => {
         const bump = key => {
           count[key] = count[key] || 0
           count[key]++
+          console.log(test.name, key, count[key])
           if (Object.keys(count).length === 5) {
             done()
           }
