@@ -120,7 +120,9 @@ describe('ReactPlayer', () => {
     renderPlayer({
       ...props,
       onProgress: p => {
+        console.log('onProgress', p.playedSeconds)
         if (changeProps && p.playedSeconds > 3) {
+          console.log('changing')
           renderPlayer({ ...props, ...changeProps })
           if (onChange) {
             onChange()
